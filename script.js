@@ -19,42 +19,7 @@ const PRODUCTS = {
 
 let cart = JSON.parse(localStorage.getItem('lessence_cart') || '[]');
 
-// Loader removed. Reveals handled purely by IntersectionObserver.
-
-// Nav scroll
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('nav');
-  if (nav && window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else if (nav) {
-    nav.classList.remove('scrolled');
-  }
-});
-
-// Reveal Observer
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      obs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Size Selector
-document.querySelectorAll('.pdp__size-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.pdp__size-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const price = btn.dataset.price;
-    const priceEl = document.getElementById('pdpPrice');
-    if (priceEl) priceEl.textContent = `$${price}`;
-  });
-});
-
-// Cart Logic
+// ── Cart Logic ────────────────────────────────────────────────
 function saveCart() {
   localStorage.setItem('lessence_cart', JSON.stringify(cart));
 }
@@ -101,6 +66,7 @@ function updateCartUI() {
 
 function showToast(msg) {
   const toast = document.getElementById('toast');
+  if (!toast) return;
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 2500);
@@ -111,9 +77,9 @@ function addProductToCart(id) {
   const activeBtn = document.querySelector('.pdp__size-btn.active');
   const size = activeBtn ? activeBtn.dataset.size : '100ML';
   const price = activeBtn ? parseInt(activeBtn.dataset.price) : 0;
-  
+
   const uid = id + '-' + size;
-  
+
   if (cart.find(i => i.uid === uid)) {
     showToast(`${p.name} (${size}) is already in your bag`);
     openCart();
@@ -145,8 +111,58 @@ function closeCart() {
   document.body.style.overflow = '';
 }
 
-document.getElementById('bagToggle')?.addEventListener('click', openCart);
-document.getElementById('cartClose')?.addEventListener('click', closeCart);
-document.getElementById('cartBackdrop')?.addEventListener('click', closeCart);
+// ── DOM Ready Init ────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
 
-updateCartUI();
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    if (nav && window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else if (nav) {
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // ── Reveal Observer (cache-safe) ─────────────────────────────
+  // Use threshold:0 + no rootMargin so elements already in the
+  // viewport on a cached instant-load still trigger the callback.
+  const revealEls = document.querySelectorAll('.reveal');
+
+  // Safety fallback: if the observer never fires within 600ms
+  // (e.g. browser quirk on cached load), force-reveal everything.
+  const safetyTimer = setTimeout(() => {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }, 600);
+
+  const obs = new IntersectionObserver((entries, observer) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+        // Cancel safety timer once at least one element is revealed
+        clearTimeout(safetyTimer);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px' });
+
+  revealEls.forEach(el => obs.observe(el));
+
+  // Size Selector
+  document.querySelectorAll('.pdp__size-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pdp__size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const price = btn.dataset.price;
+      const priceEl = document.getElementById('pdpPrice');
+      if (priceEl) priceEl.textContent = `$${price}`;
+    });
+  });
+
+  // Cart event listeners
+  document.getElementById('bagToggle')?.addEventListener('click', openCart);
+  document.getElementById('cartClose')?.addEventListener('click', closeCart);
+  document.getElementById('cartBackdrop')?.addEventListener('click', closeCart);
+
+  updateCartUI();
+});
