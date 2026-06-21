@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE - L'Ambre Noir</title>
+  <link rel="stylesheet" href="archive-style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="arc-header">
+    <div class="arc-nav">
+      <a href="index.html">← AURA</a>
+      <a href="archive.html">← INDEX</a>
+    </div>
+    <a href="archive.html" class="arc-logo">AURA (ARCHIVES)</a>
+    <div class="arc-nav">
+      <a href="#">Account</a>
+      <a href="#">Cart [<span id="arcCartCount">0</span>]</a>
+    </div>
+  </header>
+
+  <main class="arc-pdp">
+    
+    <div class="arc-pdp__left">
+      <img src="images/fragrance_two.png" alt="L'Ambre Noir" class="arc-pdp__main-img" style="filter: grayscale(100%);">
+    </div>
+
+    <div class="arc-pdp__right">
+      <h1 class="arc-pdp__title">L'Ambre Noir</h1>
+      <div class="arc-pdp__ref">REF: LAN-100-WDA // RATING: 4.8/5.0</div>
+      
+      <p class="arc-pdp__desc">
+        A brutalist interpretation of classic amber. Extreme density achieved through cold-pressed saffron and distilled dark woods. Uncompromising longevity.
+      </p>
+
+      <div class="arc-tech-block">
+        <div><strong>Olfactory Architecture v.2.04</strong></div>
+        <div style="margin-top: 10px;">Extraction: Supercritical fluid CO2 extraction at 31.1°C.</div>
+        <div>Yield: 0.04% pure absolute per 1000kg.</div>
+        <div>Batch N°: LAN-092-X</div>
+        <div>Filtration: Triple carbon matrix.</div>
+      </div>
+
+      <div class="arc-accordion">
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Profile & Specs</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Wood / Amber <br>
+              100ML // 3.4 FL OZ <br>
+              12+ Hours Longevity <br>
+              Grasse, France
+            </div>
+          </div>
+        </div>
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Ingredients Matrix</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Alcohol Denat., Parfum (Fragrance), Aqua (Water), Linalool, Limonene, Coumarin, Citronellol, Geraniol, Cinnamal, Citral, Eugenol. <br><br>
+              Contains Saffron Absolute (0.5%), Oud Extract (1.2%).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arc-buy">
+        <div class="arc-buy__price">
+          <span class="arc-strikethrough">$340</span>
+          <span class="arc-sale-text">$289</span>
+        </div>
+        <div class="arc-buy__grid">
+          <select class="arc-buy__qty">
+            <option>QTY: 01</option>
+            <option>QTY: 02</option>
+            <option>QTY: 03</option>
+          </select>
+          <button class="arc-buy__btn" onclick="addToArcCart('l-ambre-noir', 289)">ADD TO CART</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <section class="arc-associated">
+    <div class="arc-associated__title">Associated Archives</div>
+    <div class="arc-associated__grid">
+      <div class="arc-associated__item">
+        <img src="images/macro_saffron.png" alt="Saffron">
+        <div class="arc-associated__item-title">Case 01: Saffron Absolute</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/macro_amber.png" alt="Amber">
+        <div class="arc-associated__item-title">Case 02: Synthetic Ambergris</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/macro_oud.png" alt="Oud">
+        <div class="arc-associated__item-title">Case 03: Distilled Agarwood</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="archive-script.js?v=3"></script>
+</body>
+</html>

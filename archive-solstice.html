@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE - Solstice</title>
+  <link rel="stylesheet" href="archive-style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="arc-header">
+    <div class="arc-nav">
+      <a href="index.html">← AURA</a>
+      <a href="archive.html">← INDEX</a>
+    </div>
+    <a href="archive.html" class="arc-logo">AURA (ARCHIVES)</a>
+    <div class="arc-nav">
+      <a href="#">Account</a>
+      <a href="#">Cart [<span id="arcCartCount">0</span>]</a>
+    </div>
+  </header>
+
+  <main class="arc-pdp">
+    
+    <div class="arc-pdp__left">
+      <img src="images/fragrance_three.png" alt="Solstice" class="arc-pdp__main-img" style="filter: grayscale(100%);">
+    </div>
+
+    <div class="arc-pdp__right">
+      <h1 class="arc-pdp__title">Solstice</h1>
+      <div class="arc-pdp__ref">REF: SOL-100-FL // RATING: 4.5/5.0</div>
+      
+      <p class="arc-pdp__desc">
+        Sterile white florals. Overexposed neroli against a backdrop of clinical white musk. A scent designed to evoke extreme, blinding light.
+      </p>
+
+      <div class="arc-tech-block">
+        <div><strong>Olfactory Architecture v.3.01</strong></div>
+        <div style="margin-top: 10px;">Synthesis: Molecular distillation of white musk variants.</div>
+        <div>Yield: 0.08% absolute pure extract.</div>
+        <div>Batch N°: SOL-112-Z</div>
+        <div>Filtration: Vacuum distilled.</div>
+      </div>
+
+      <div class="arc-accordion">
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Profile & Specs</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Floral / Musk <br>
+              100ML // 3.4 FL OZ <br>
+              10+ Hours Longevity <br>
+              Grasse, France
+            </div>
+          </div>
+        </div>
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Ingredients Matrix</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Alcohol Denat., Parfum (Fragrance), Aqua (Water), Benzyl Salicylate, Linalool, Hydroxycitronellal, Geraniol. <br><br>
+              Contains Synthetic White Musk (3.5%), Neroli Absolute (0.9%).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arc-buy">
+        <div class="arc-buy__price">
+          <span class="arc-strikethrough">$310</span>
+          <span class="arc-sale-text">$279</span>
+        </div>
+        <div class="arc-buy__grid">
+          <select class="arc-buy__qty">
+            <option>QTY: 01</option>
+            <option>QTY: 02</option>
+            <option>QTY: 03</option>
+          </select>
+          <button class="arc-buy__btn" onclick="addToArcCart('solstice', 279)">ADD TO CART</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <section class="arc-associated">
+    <div class="arc-associated__title">Associated Archives</div>
+    <div class="arc-associated__grid">
+      <div class="arc-associated__item">
+        <img src="images/macro_rose.png" alt="Rose">
+        <div class="arc-associated__item-title">Case 06: Damask Rose Extract</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/mood_petale.png" alt="Petale">
+        <div class="arc-associated__item-title">Case 07: Synthetic Floral Matrix</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/mood_aurum.png" alt="Aurum">
+        <div class="arc-associated__item-title">Reference: Solstice Light</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="archive-script.js?v=3"></script>
+</body>
+</html>
