@@ -4,15 +4,15 @@
 
 const PRODUCTS = {
   'l-ambre-noir': {
-    name: "L'Ambre Noir",
+    name: 'ONIRIQUE',
     image: 'images/fragrance_two.png',
   },
   'vesper': {
-    name: 'Vesper',
+    name: 'ETOILE',
     image: 'images/fragrance_one.png',
   },
   'solstice': {
-    name: 'Solstice',
+    name: 'NEIGE',
     image: 'images/fragrance_three.png',
   }
 };
