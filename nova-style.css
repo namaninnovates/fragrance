@@ -1,0 +1,1082 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* AURA Brand Palette — identical to style.css */
+  --pink: #000000;
+  --pink-hover: #333333;
+  --orange: #333333;
+  --dark: #000000;
+  --text: #000000;
+  --muted: #666666;
+  --light: #999999;
+  --bg: #F9F9F9;
+  --white: #FFFFFF;
+  --border: #E5E5E5;
+  --green: #000000;
+  --yellow: #000000;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+
+  /* AURA Typography */
+  --font-serif: 'Bodoni Moda', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ============================================================
+   PROMO BAR
+============================================================ */
+.nova-promo-bar {
+  background: var(--dark);
+  color: #ccc;
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 12.5px;
+  letter-spacing: 0.2px;
+}
+
+.nova-promo-bar strong { color: white; }
+
+/* ============================================================
+   HEADER
+============================================================ */
+.nova-header {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.nova-header__top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nova-logo {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 6px;
+  font-family: var(--font-serif);
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.nova-search {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.nova-search:focus-within { border-color: var(--pink); }
+
+.nova-search input {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  color: var(--dark);
+  font-family: inherit;
+}
+
+.nova-search button {
+  padding: 0 20px;
+  background: var(--pink);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.nova-search button:hover { background: var(--pink-hover); }
+
+.nova-header__actions {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.nova-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: 500;
+  gap: 2px;
+  cursor: pointer;
+  transition: color 0.2s;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.nova-action:hover { color: var(--muted); }
+.nova-action__icon { font-size: 22px; line-height: 1; }
+
+/* Category Nav */
+.nova-nav { border-top: 1px solid var(--border); }
+
+.nova-nav__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nova-nav a {
+  display: block;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  color: var(--dark);
+}
+
+.nova-nav a:hover { color: var(--dark); opacity: 0.6; border-bottom-color: var(--dark); }
+.nova-nav a.active { color: var(--dark); border-bottom-color: var(--dark); font-weight: 700; }
+
+.nova-nav__site-links {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nova-nav__site-link {
+  background: var(--dark) !important;
+  color: #fff !important;
+  padding: 5px 12px !important;
+  border-radius: 0 !important;
+  font-size: 10px !important;
+  border-bottom: none !important;
+  letter-spacing: 1.5px !important;
+  transition: background 0.2s !important;
+  font-family: var(--font-sans) !important;
+}
+
+.nova-nav__site-link:hover { background: #333 !important; color: #fff !important; border-bottom: none !important; }
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+.nova-breadcrumb {
+  padding: 12px 48px;
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nova-breadcrumb a { color: var(--muted); }
+.nova-breadcrumb a:hover { color: var(--pink); text-decoration: underline; }
+
+/* ============================================================
+   MAIN LAYOUT (LISTING PAGE)
+============================================================ */
+.nova-layout {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 80px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ============================================================
+   SIDEBAR / FILTERS
+============================================================ */
+.nova-sidebar {
+  width: 236px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  position: sticky;
+  top: 68px;
+}
+
+.nova-sidebar__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--dark);
+  margin-bottom: 18px;
+}
+
+.nova-sidebar__head h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--dark);
+}
+
+.nova-sidebar__clear {
+  font-size: 12px;
+  color: var(--pink);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nova-filter {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nova-filter:last-child { border-bottom: none; margin-bottom: 0; }
+
+.nova-filter__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.nova-filter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 9px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.nova-filter input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--pink);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ============================================================
+   CONTENT AREA (LISTING)
+============================================================ */
+.nova-content { flex: 1; }
+
+.nova-content__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nova-content__head strong { color: var(--dark); }
+
+.nova-sort {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.nova-sort select {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--dark);
+  cursor: pointer;
+  outline: none;
+  background: white;
+  font-family: inherit;
+}
+
+/* ============================================================
+   PROMO BANNER
+============================================================ */
+.nova-banner {
+  background: var(--dark);
+  border-radius: 0;
+  padding: 28px 40px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nova-banner__left {}
+
+.nova-banner__tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 3px 14px;
+  border-radius: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-sans);
+}
+
+.nova-banner h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+}
+
+.nova-banner p { font-size: 13px; opacity: 0.85; }
+
+.nova-banner__code {
+  background: rgba(255,255,255,0.12);
+  border: 1.5px dashed rgba(255,255,255,0.5);
+  border-radius: 0;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-align: center;
+  font-family: var(--font-serif);
+}
+
+.nova-banner__code small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+/* ============================================================
+   PRODUCT GRID (LISTING)
+============================================================ */
+.nova-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ============================================================
+   PRODUCT CARD
+============================================================ */
+.nova-card {
+  background: white;
+  position: relative;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.nova-card:hover { box-shadow: var(--shadow-md); z-index: 1; }
+
+.nova-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nova-card__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.nova-card:hover .nova-card__img { transform: scale(1.04); }
+
+.nova-card__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--pink);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.nova-card__wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 16px;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+
+.nova-card__wishlist:hover, .nova-card__wishlist.active { color: var(--pink); }
+
+.nova-card__body {
+  padding: 12px 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nova-card__brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  font-family: var(--font-sans);
+}
+
+.nova-card__name {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: block;
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+}
+
+.nova-card__rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.nova-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--dark);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: 0.5px;
+}
+
+.nova-rating-badge .star { font-size: 10px; }
+
+.nova-reviews-link {
+  font-size: 12px;
+  color: var(--light);
+}
+
+.nova-card__price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.nova-price-now {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark);
+  font-family: var(--font-serif);
+}
+
+.nova-price-was {
+  font-size: 13px;
+  color: var(--light);
+  text-decoration: line-through;
+}
+
+.nova-discount {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  letter-spacing: 0.5px;
+}
+
+.nova-card__delivery {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.nova-card__urgency {
+  font-size: 12px;
+  color: #FF6B00;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.nova-card__add {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.2s;
+  margin-top: auto;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+}
+
+.nova-card__add:hover, .nova-card__add.added {
+  background: var(--dark);
+  color: white;
+}
+
+/* ============================================================
+   TOAST
+============================================================ */
+.nova-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  background: var(--dark);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 9999;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.nova-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+/* ============================================================
+   PDP LAYOUT
+============================================================ */
+.nova-pdp-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 48px 60px;
+}
+
+.nova-pdp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+/* Gallery */
+.nova-gallery {
+  position: sticky;
+  top: 72px;
+}
+
+.nova-gallery__main {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.nova-gallery__thumbs {
+  display: flex;
+  gap: 8px;
+}
+
+.nova-gallery__thumb {
+  width: 72px;
+  height: 90px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: border-color 0.2s;
+}
+
+.nova-gallery__thumb.active, .nova-gallery__thumb:hover { border-color: var(--pink); }
+
+/* Info */
+.nova-info {}
+
+.nova-info__brand {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.nova-info__name {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.nova-info__rating-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nova-info__reviews-link {
+  font-size: 13px;
+  color: var(--pink);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.nova-info__verified {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* Price Block */
+.nova-price-block {
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nova-price-block__label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.nova-price-block__row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.nova-price-block__now {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--dark);
+  font-family: var(--font-serif);
+}
+
+.nova-price-block__was {
+  font-size: 18px;
+  color: var(--light);
+  text-decoration: line-through;
+}
+
+.nova-price-block__off {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.nova-price-block__note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nova-price-block__offers {
+  margin-top: 12px;
+  background: var(--bg);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+}
+
+.nova-price-block__offers strong { color: var(--dark); }
+
+/* Size Section */
+.nova-size-section {
+  margin-bottom: 22px;
+}
+
+.nova-size-section__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.nova-sizes {
+  display: flex;
+  gap: 10px;
+}
+
+.nova-size-btn {
+  border: 1.5px solid var(--border);
+  background: white;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  color: var(--dark);
+  font-family: inherit;
+}
+
+.nova-size-btn.active, .nova-size-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  font-weight: 700;
+}
+
+/* Actions */
+.nova-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.nova-btn-wishlist {
+  flex: 1;
+  padding: 15px;
+  background: white;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nova-btn-wishlist:hover { background: var(--dark); color: white; }
+
+.nova-btn-cart {
+  flex: 2;
+  padding: 15px;
+  background: var(--dark);
+  border: none;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.2s;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+}
+
+.nova-btn-cart:hover { background: #333; }
+
+/* Urgency */
+.nova-urgency {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 0;
+  margin-bottom: 24px;
+  border-left: 3px solid #000;
+  font-family: var(--font-sans);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Description */
+.nova-desc-section { margin-bottom: 24px; }
+
+.nova-desc-section__title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nova-desc-section p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.nova-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.nova-spec { display: flex; flex-direction: column; gap: 2px; }
+
+.nova-spec strong {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--light);
+}
+
+.nova-spec span {
+  font-size: 14px;
+  color: var(--dark);
+}
+
+/* ============================================================
+   REVIEWS SECTION
+============================================================ */
+.nova-reviews-section {
+  padding: 0 0 48px;
+  border-top: 8px solid var(--bg);
+  padding-top: 40px;
+}
+
+.nova-reviews-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.nova-reviews-summary {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  background: white;
+  border-radius: 4px;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+}
+
+.nova-avg-block { text-align: center; padding-right: 40px; border-right: 1px solid var(--border); }
+
+.nova-avg-num {
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1;
+  font-family: var(--font-serif);
+}
+
+.nova-avg-stars { color: var(--dark); font-size: 16px; margin: 6px 0; letter-spacing: 3px; }
+
+.nova-avg-total { font-size: 13px; color: var(--muted); }
+
+.nova-rating-bars { flex: 1; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+
+.nova-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.nova-bar-row span:first-child { width: 36px; flex-shrink: 0; }
+
+.nova-bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.nova-bar-fill {
+  height: 100%;
+  background: var(--dark);
+  border-radius: 0;
+}
+
+.nova-bar-pct { width: 36px; text-align: right; flex-shrink: 0; }
+
+.nova-review-list { display: flex; flex-direction: column; gap: 16px; }
+
+.nova-review {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 0;
+  border-left: 2px solid var(--dark);
+}
+
+.nova-review__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.nova-review__avatar {
+  width: 36px;
+  height: 36px;
+  background: var(--dark);
+  color: white;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+}
+
+.nova-review__meta-name { font-weight: 700; font-size: 14px; color: var(--dark); }
+.nova-review__meta-date { font-size: 12px; color: var(--light); }
+
+.nova-review__stars { color: var(--dark); font-size: 13px; margin-bottom: 6px; letter-spacing: 2px; }
+.nova-review__title { font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 6px; }
+.nova-review__body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.nova-review__helpful { font-size: 12px; color: var(--light); margin-top: 12px; }
+.nova-review__helpful span { color: var(--pink); cursor: pointer; margin-left: 4px; }
+
+/* ============================================================
+   RELATED PRODUCTS
+============================================================ */
+.nova-related-section {
+  border-top: 8px solid var(--bg);
+  padding-top: 36px;
+  padding-bottom: 60px;
+}
+
+.nova-related-section h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.nova-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.nova-footer {
+  background: var(--dark);
+  color: #aaa;
+  padding: 48px 48px 24px;
+}
+
+.nova-footer__grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.nova-footer h4 {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.nova-footer a, .nova-footer p {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.nova-footer a:hover { color: white; }
+
+.nova-footer__bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #3a3a4a;
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
