@@ -156,9 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = btn.dataset.price;
       const priceEl = document.getElementById('pdpPrice');
       if (priceEl) {
-        priceEl.innerHTML = `<span style="text-decoration: line-through; opacity: 0.5; margin-right: 8px;">₹54,000</span>
-                             <span class="pdp__price-final">₹27,000</span>
-                             <span style="background: #000; color: #fff; padding: 2px 6px; font-size: 0.7rem; margin-left: 8px; text-transform: uppercase;">50% OFF</span>`;
+        priceEl.textContent = `₹${Number(price).toLocaleString('en-IN')}`;
       }
     });
   });
