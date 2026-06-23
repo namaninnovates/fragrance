@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solstice | AURA</title>
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
+  <script src="script.js?v=11" defer></script>
 </head>
 <body data-theme="light">
 
@@ -56,11 +57,15 @@
         <div class="pdp__purchase">
           <div class="pdp__size-label">Size</div>
           <div class="pdp__sizes">
-            <button class="pdp__size-btn pdp-btn-size" data-size="50ML" data-price="6000">50ML</button>
-            <button class="pdp__size-btn pdp-btn-size active" data-size="100ML" data-price="8500">100ML</button>
+            <button class="pdp__size-btn pdp-btn-size" data-size="50ML" data-price="27000">50ML</button>
+            <button class="pdp__size-btn pdp-btn-size active" data-size="100ML" data-price="27000">100ML</button>
           </div>
           <div class="pdp__action">
-            <div class="pdp__price" id="pdpPrice">Rs 8,500</div>
+            <div class="pdp__price" id="pdpPrice">
+              <span style="text-decoration: line-through; opacity: 0.5; margin-right: 8px;">₹54,000</span>
+              <span class="pdp__price-final">₹27,000</span>
+              <span style="background: #000; color: #fff; padding: 2px 6px; font-size: 0.7rem; margin-left: 8px; text-transform: uppercase;">50% OFF</span>
+            </div>
             <button class="pdp__add" onclick="addProductToCart('solstice')">Add to Bag</button>
           </div>
         </div>

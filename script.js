@@ -54,14 +54,14 @@ function updateCartUI() {
       <div class="cart-item__info">
         <h4 class="cart-item__name">${item.name}</h4>
         <p class="cart-item__meta">${item.size}</p>
-        <div class="cart-item__price">$${item.price}</div>
+        <div class="cart-item__price">₹${item.price}</div>
         <button class="cart-item__remove" onclick="removeFromCart('${item.uid}')">Remove</button>
       </div>
     `;
     body.insertBefore(d, empty);
   });
 
-  if (totalEl) totalEl.textContent = `$${total}`;
+    if (totalEl) totalEl.textContent = `₹${total}`;
 }
 
 function showToast(msg) {
@@ -155,7 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const price = btn.dataset.price;
       const priceEl = document.getElementById('pdpPrice');
-      if (priceEl) priceEl.textContent = `$${price}`;
+      if (priceEl) {
+        priceEl.innerHTML = `<span style="text-decoration: line-through; opacity: 0.5; margin-right: 8px;">₹54,000</span>
+                             <span class="pdp__price-final">₹27,000</span>
+                             <span style="background: #000; color: #fff; padding: 2px 6px; font-size: 0.7rem; margin-left: 8px; text-transform: uppercase;">50% OFF</span>`;
+      }
     });
   });
 
