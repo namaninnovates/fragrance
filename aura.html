@@ -81,37 +81,64 @@
     <!-- Featured Ribbon -->
     <section class="aura-ribbon">
       <h2>Frequently repurchased in Luxury Beauty</h2>
-      <div class="aura-vertical-list">
+      <div class="product-grid">
         
-        <a href="aura-l-ambre-noir.html" class="aura-vertical-item">
-          <img src="images/fragrance_two.png" alt="ONIRIQUE">
-          <div class="aura-vertical-details">
-            <h3>ONIRIQUE</h3>
-            <div class="aura-vertical-rating">★★★★☆ 4,120 ratings</div>
-            <div class="aura-vertical-price">Rs 27,000</div>
-            <div class="aura-vertical-desc">Experience the depth of ONIRIQUE, a masterful blend of dark woods, rare resins, and a heart of precious saffron. Designed for both men and women.</div>
+        <div class="card">
+          <img src="images/fragrance_two.png" alt="ONIRIQUE" class="card__img">
+          <a href="aura-l-ambre-noir.html" class="card__title">ONIRIQUE Eau de Parfum</a>
+          <div class="card__brand">by AURA LUXE</div>
+          <div class="card__rating">
+            <span class="card__stars">★★★★☆</span>
+            <a href="aura-l-ambre-noir.html" class="card__count">4,120 ratings</a>
           </div>
-        </a>
+          <div class="card__price">
+            <span class="aura-price-strike">Rs 60,000</span>
+            <span style="color: #B12704; font-size: 1.1rem;">Rs 54,000</span>
+            <span class="aura-discount-badge">-15%</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 5px; margin-bottom: 20px; flex-grow: 1;">
+            Experience the depth of ONIRIQUE, a masterful blend of dark woods, rare resins, and a heart of precious saffron. Designed for both men and women.
+          </div>
+          <button class="card__btn" onclick="addToAuraCart('l-ambre-noir', 54000)">Add to Cart</button>
+        </div>
 
-        <a href="aura-vesper.html" class="aura-vertical-item">
-          <img src="images/fragrance_three.png" alt="ETOILE">
-          <div class="aura-vertical-details">
-            <h3>ETOILE</h3>
-            <div class="aura-vertical-rating">★★★★★ 8,901 ratings</div>
-            <div class="aura-vertical-price">Rs 15,000</div>
-            <div class="aura-vertical-desc">ETOILE captures the essence of a dew-covered forest at dawn. With sharp, green citrus opening notes of bergamot and yuzu, it settles into a cool, sophisticated base.</div>
+        <div class="card">
+          <img src="images/fragrance_three.png" alt="ETOILE" class="card__img">
+          <a href="aura-vesper.html" class="card__title">ETOILE Eau de Parfum</a>
+          <div class="card__brand">by AURA LUXE</div>
+          <div class="card__rating">
+            <span class="card__stars">★★★★★</span>
+            <a href="aura-vesper.html" class="card__count">8,901 ratings</a>
           </div>
-        </a>
+          <div class="card__price">
+            <span class="aura-price-strike">Rs 36,000</span>
+            <span style="color: #B12704; font-size: 1.1rem;">Rs 30,000</span>
+            <span class="aura-discount-badge">-20%</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 5px; margin-bottom: 20px; flex-grow: 1;">
+            ETOILE captures the essence of a dew-covered forest at dawn. With sharp, green citrus opening notes of bergamot and yuzu, it settles into a cool, sophisticated base.
+          </div>
+          <button class="card__btn" onclick="addToAuraCart('vesper', 30000)">Add to Cart</button>
+        </div>
 
-        <a href="aura-solstice.html" class="aura-vertical-item">
-          <img src="images/fragrance_one.png" alt="NEIGE">
-          <div class="aura-vertical-details">
-            <h3>NEIGE</h3>
-            <div class="aura-vertical-rating">★★★★☆ 2,344 ratings</div>
-            <div class="aura-vertical-price">Rs 8,500</div>
-            <div class="aura-vertical-desc">NEIGE is a meditation on light and purity. A radiant burst of bright neroli and orange blossom softly fades into an ethereal, comforting base of white musk.</div>
+        <div class="card">
+          <img src="images/fragrance_one.png" alt="NEIGE" class="card__img">
+          <a href="aura-solstice.html" class="card__title">NEIGE Eau de Parfum</a>
+          <div class="card__brand">by AURA LUXE</div>
+          <div class="card__rating">
+            <span class="card__stars">★★★★☆</span>
+            <a href="aura-solstice.html" class="card__count">2,344 ratings</a>
           </div>
-        </a>
+          <div class="card__price">
+            <span class="aura-price-strike">Rs 19,000</span>
+            <span style="color: #B12704; font-size: 1.1rem;">Rs 17,000</span>
+            <span class="aura-discount-badge">-10%</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 5px; margin-bottom: 20px; flex-grow: 1;">
+            NEIGE is a meditation on light and purity. A radiant burst of bright neroli and orange blossom softly fades into an ethereal, comforting base of white musk.
+          </div>
+          <button class="card__btn" onclick="addToAuraCart('solstice', 17000)">Add to Cart</button>
+        </div>
 
       </div>
     </section>
