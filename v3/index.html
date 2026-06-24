@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="arc-header">
+    <div class="arc-nav">
+      <a href="index.html">INDEX</a>
+    </div>
+    <a href="index.html" class="arc-logo">AURA (ARCHIVES)</a>
+    <div class="arc-nav">
+      <a href="#">Account</a>
+      <a href="#">Cart [<span id="arcCartCount">0</span>]</a>
+      <a href="nova.html" style="background:#FF3F6C; color:#fff; padding: 2px 10px; border-radius: 4px; font-size: 11px; letter-spacing: 0.5px;">NOVA &#10142;</a>
+    </div>
+  </header>
+
+  <div class="arc-marquee">
+    FREE COMPLIMENTARY SHIPPING GLOBALLY // RETURNS ACCEPTED WITHIN 14 DAYS // FREE COMPLIMENTARY SHIPPING GLOBALLY // RETURNS ACCEPTED WITHIN 14 DAYS // FREE COMPLIMENTARY SHIPPING GLOBALLY //
+  </div>
+
+  <main class="arc-main">
+    
+    <aside class="arc-sidebar">
+      <ul>
+        <li style="margin-bottom: 20px; font-weight: bold;">Filter Index</li>
+        <li><a href="#" class="active">All Fragments</a></li>
+        <li><a href="#">Eau de Parfum</a></li>
+        <li><a href="#">Extraits</a></li>
+      </ul>
+      <ul>
+        <li style="margin-bottom: 20px; font-weight: bold;">Notes</li>
+        <li><a href="#">Wood / Amber</a></li>
+        <li><a href="#">Citrus / Green</a></li>
+        <li><a href="#">Floral / Musk</a></li>
+      </ul>
+      <ul>
+        <li style="margin-bottom: 20px; font-weight: bold;">Sort</li>
+        <li><a href="#">Price Ascending</a></li>
+        <li><a href="#">Price Descending</a></li>
+        <li><a href="#">Index</a></li>
+      </ul>
+    </aside>
+
+    <div class="arc-grid">
+      
+      <!-- Product 1 -->
+      <div class="arc-card">
+        <a href="l-ambre-noir.html">
+          <img src="images/fragrance_two.png" alt="ONIRIQUE" class="arc-card__img">
+        </a>
+        <div class="arc-card__info">
+          <div>
+            <a href="l-ambre-noir.html" class="arc-card__title">ONIRIQUE</a>
+            <div class="arc-card__meta">Wood / Amber // 100ML</div>
+          </div>
+          <div class="arc-card__price" style="display: flex; flex-direction: column; align-items: flex-end;">
+            <span style="text-decoration: line-through; opacity: 0.5; font-size: 0.8em; margin-bottom: 2px;">Rs 54,000</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="arc-sale-text">Rs 27,000</span>
+              <span style="background: #fff; color: #000; padding: 2px 4px; font-size: 0.65rem; font-weight: bold;">50% OFF</span>
+            </div>
+          </div>
+        </div>
+        <button class="arc-card__btn" onclick="addToArcCart('l-ambre-noir', 27000)">Add To Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="arc-card">
+        <a href="vesper.html">
+          <img src="images/fragrance_one.png" alt="ETOILE" class="arc-card__img">
+        </a>
+        <div class="arc-card__info">
+          <div>
+            <a href="vesper.html" class="arc-card__title">ETOILE</a>
+            <div class="arc-card__meta">Citrus / Green // 100ML</div>
+          </div>
+          <div class="arc-card__price" style="display: flex; flex-direction: column; align-items: flex-end;">
+            <span style="text-decoration: line-through; opacity: 0.5; font-size: 0.8em; margin-bottom: 2px;">Rs 30,000</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="arc-sale-text">Rs 15,000</span>
+              <span style="background: #fff; color: #000; padding: 2px 4px; font-size: 0.65rem; font-weight: bold;">50% OFF</span>
+            </div>
+          </div>
+        </div>
+        <button class="arc-card__btn" onclick="addToArcCart('vesper', 15000)">Add To Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="arc-card">
+        <a href="solstice.html">
+          <img src="images/fragrance_three.png" alt="NEIGE" class="arc-card__img">
+        </a>
+        <div class="arc-card__info">
+          <div>
+            <a href="solstice.html" class="arc-card__title">NEIGE</a>
+            <div class="arc-card__meta">Floral / Musk // 100ML</div>
+          </div>
+          <div class="arc-card__price" style="display: flex; flex-direction: column; align-items: flex-end;">
+            <span style="text-decoration: line-through; opacity: 0.5; font-size: 0.8em; margin-bottom: 2px;">Rs 17,000</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="arc-sale-text">Rs 8,500</span>
+              <span style="background: #fff; color: #000; padding: 2px 4px; font-size: 0.65rem; font-weight: bold;">50% OFF</span>
+            </div>
+          </div>
+        </div>
+        <button class="arc-card__btn" onclick="addToArcCart('solstice', 8500)">Add To Cart</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

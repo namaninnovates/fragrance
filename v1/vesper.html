@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vesper | AURA</title>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="script.js?v=12" defer></script>
+</head>
+<body data-theme="light">
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="index.html">Menu</a>
+      </div>
+      <a href="index.html" class="nav__logo">AURA</a>
+      <div class="nav__right">
+        <button id="bagToggle">Bag (<span id="bagCount">0</span>)</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody">
+      <div id="cartEmpty" style="color: var(--text-muted); text-align: center; padding-top: 2rem;">Your bag is empty.</div>
+    </div>
+    <div class="cart-drawer__foot" id="cartFoot" style="display:none;">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="cart-drawer__checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <main class="pdp">
+    <!-- Hero -->
+    <section class="pdp__hero">
+      <div class="pdp__info reveal" style="order: 1;">
+        <h1 class="pdp__title">ETOILE</h1>
+        <p class="pdp__desc">The sharp green cut of twilight. A bracing blend of sharp citrus and moss, cooling the air as evening approaches.</p>
+        
+        <div class="pdp__purchase">
+          <div class="pdp__size-label">Size</div>
+          <div class="pdp__sizes">
+            <button class="pdp__size-btn pdp-btn-size" data-size="50ML" data-price="15000">50ML</button>
+            <button class="pdp__size-btn pdp-btn-size active" data-size="100ML" data-price="15000">100ML</button>
+          </div>
+          <div class="pdp__action">
+            <div class="pdp__price" id="pdpPrice">₹15,000</div>
+            <button class="pdp__add" onclick="addProductToCart('vesper')">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+      <div class="pdp__image reveal" style="order: 2;">
+        <img src="images/fragrance_one.png" alt="ETOILE">
+      </div>
+    </section>
+
+    <!-- Scent Pyramid -->
+    <section class="pyramid">
+      <div class="section-header reveal">
+        <h2 class="section-title">Scent Pyramid</h2>
+      </div>
+      <div class="pyramid__grid">
+        <div class="pyramid__card reveal" style="background-image: url('images/macro_bergamot.png');">
+          <span class="pyramid__tier">Top Notes</span>
+          <h3 class="pyramid__notes">Bergamot<br>Yuzu</h3>
+          <p class="pyramid__desc">A bright, acidic burst that awakens the senses instantly.</p>
+        </div>
+        <div class="pyramid__card reveal" style="background-image: url('images/mood_nuit.png');">
+          <span class="pyramid__tier">Heart Notes</span>
+          <h3 class="pyramid__notes">Oakmoss<br>Clary Sage</h3>
+          <p class="pyramid__desc">Deep green foliage, damp earth, and herbaceous clarity.</p>
+        </div>
+        <div class="pyramid__card reveal" style="background-image: url('images/macro_oud.png');">
+          <span class="pyramid__tier">Base Notes</span>
+          <h3 class="pyramid__notes">Vetiver<br>Cedar</h3>
+          <p class="pyramid__desc">A dry, woody anchor that brings structure and persistence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Raw Materials -->
+    <section class="materials">
+      <div class="materials__grid">
+        <div class="materials__text reveal">
+          <h2 class="section-title" style="margin-bottom: 1rem; border: none;">Raw Materials</h2>
+          <p class="materials__intro">A study in green. We juxtapose the sharpest citrus against the deepest forest mosses to create a scent of incredible tension.</p>
+          
+          <div class="materials__item">
+            <h4 class="materials__item-title">Calabrian Bergamot</h4>
+            <p class="materials__item-desc">Cold-pressed rind yields a uniquely bright, slightly bitter citrus note.</p>
+          </div>
+          <div class="materials__item">
+            <h4 class="materials__item-title">Haitian Vetiver</h4>
+            <p class="materials__item-desc">Earthy, smoky, and deeply grounding.</p>
+          </div>
+        </div>
+        <div class="materials__images reveal">
+          <img src="images/macro_bergamot.png" alt="Bergamot" class="materials__img">
+          <img src="images/macro_iris.png" alt="Iris" class="materials__img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Layering Suggestion -->
+    <section class="layering reveal">
+      <div class="layering__grid">
+        <div class="layering__info">
+          <span style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);">Layering Suggestion</span>
+          <h3>ONIRIQUE</h3>
+          <p>Ground the sharp citrus and green moss of ETOILE with the deep, resinous smoke of ONIRIQUE. Together, they create the scent of a damp, ancient forest floor at twilight.</p>
+          <a href="l-ambre-noir.html" class="layering__link">Discover ONIRIQUE</a>
+        </div>
+        <div class="layering__image">
+          <img src="images/fragrance_two.png" alt="ONIRIQUE">
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Impressions -->
+    <section class="impressions reveal">
+      <div class="impression-card">
+        <p class="impression-quote">"Like a walk through a damp, ancient forest right after the rain. Bracing, clear, and perfectly balanced."</p>
+        <span class="impression-author">— Editorial Review</span>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="essence-block">
+    <h2 class="essence-block__title reveal">AURA</h2>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__logo">AURA</h3>
+        <p>&copy; 2026 AURA Parfums.<br>All rights reserved.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Client Care</h4>
+        <a href="#">Shipping & Returns</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Atelier</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Boutiques</a>
+        <a href="#">Ingredients</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Newsletter</h4>
+        <p>Subscribe to receive updates on new releases and private collections.</p>
+        <div class="footer__input-group">
+          <input type="email" placeholder="Email Address">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>

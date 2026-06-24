@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEIGE | AURA LUXE</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="aura-nav" style="display: flex; gap: 20px; font-size: 14px;">
+      <a href="products.html">← Back to Catalog</a>
+    </div>
+    <a href="index.html" class="header__logo">AURA (LUXE)</a>
+    
+    <div class="header__search">
+      <select>
+        <option>All Departments</option>
+      </select>
+      <input type="text" placeholder="Search AURA LUXE">
+      <button><span class="material-symbols-outlined">search</span></button>
+    </div>
+
+    <div class="header__nav">
+      <div class="header__nav-item">
+        <span class="header__nav-small">Hello, Sign in</span>
+        <span class="header__nav-large">Account & Lists</span>
+      </div>
+      <div class="header__nav-item">
+        <span class="header__nav-small">Returns</span>
+        <span class="header__nav-large">& Orders</span>
+      </div>
+      <div class="header__cart">
+        <span class="material-symbols-outlined" style="font-size: 30px;">shopping_cart</span>
+        <span id="auraCartCount">0</span>
+        <span>Cart</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subheader -->
+  <div class="subheader">
+    <a href="products.html"><span class="material-symbols-outlined" style="font-size:16px; vertical-align:middle;">menu</span> All Products</a>
+    <a href="#">Today's Deals</a>
+    <a href="#">Customer Service</a>
+  </div>
+
+  <main class="aura-pdp">
+    
+    <!-- Gallery -->
+    <div class="aura-gallery">
+      <img src="images/fragrance_three.png" class="aura-gallery__main" alt="NEIGE">
+      <div style="display: flex; gap: 10px;">
+        <img src="images/mood_petale.png" style="width: 60px; height: 60px; border: 1px solid var(--border); cursor: pointer; object-fit: cover;">
+        <img src="images/macro_rose.png" style="width: 60px; height: 60px; border: 1px solid var(--border); cursor: pointer; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="aura-details">
+      <h1 class="aura-details__title">NEIGE Eau de Parfum - Pure White Florals and Musk, 100ML</h1>
+      <div class="aura-details__brand">Visit the AURA LUXE Store</div>
+      <div class="aura-details__rating">
+        <span style="color: #000; letter-spacing: 2px;">★★★★☆</span>
+        <a href="#" style="font-size: 13px; margin-left: 10px;">2,344 ratings</a> | 
+        <a href="#" style="font-size: 13px;">89 answered questions</a>
+      </div>
+
+      <div class="aura-details__price">
+        <span style="font-size: 14px; color: var(--text-muted); vertical-align: middle;">Price:</span>
+        Rs 8,500
+      </div>
+      <div style="font-size: 13px; margin-bottom: 20px;">
+        <strong>FREE Returns</strong>
+      </div>
+
+      <ul class="aura-details__bullets">
+        <li><strong>Scent Profile:</strong> Bright neroli, soft white musk, and cashmere.</li>
+        <li><strong>Vibe:</strong> Ethereal, clean, and comforting.</li>
+        <li><strong>Ingredients:</strong> Neroli, Orange Blossom, Jasmine, White Musk, Linen.</li>
+        <li><strong>Volume:</strong> 100 ML (3.4 fl oz)</li>
+      </ul>
+    </div>
+
+    <!-- Buy Box -->
+    <div class="aura-buybox">
+        <div class="aura-buybox__price">
+          <span class="aura-price-strike">Rs 17,000</span>
+          <span>Rs 8,500</span>
+          <span class="aura-discount-badge">-50%</span>
+        </div>
+      <div style="font-size: 13px; margin-bottom: 10px;"><strong>FREE delivery</strong> Tomorrow, Jun 22.</div>
+      <div class="aura-buybox__stock" style="color: #B12704;">Only 4 left in stock - order soon.</div>
+      
+      <select class="aura-buybox__qty">
+        <option>Qty: 1</option>
+        <option>Qty: 2</option>
+      </select>
+
+          <button class="aura-btn aura-btn--primary" onclick="addToAuraCart('solstice', 8500)">Add to Cart</button>
+          <button class="aura-btn aura-btn--secondary" onclick="window.location.href='aura-checkout.html'">Buy Now</button>
+
+      <div class="aura-buybox__meta" style="margin-top: 15px;">
+        <span>Ships from</span> <strong>AURA (LUXE)</strong>
+        <span>Sold by</span> <strong>AURA (LUXE)</strong>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="aura-pdp-bottom">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 60px;">
+      <h2 style="font-family: var(--font-serif); font-size: 28px; margin-bottom: 20px;">Product Description</h2>
+      <p style="max-width: 800px; color: #333; line-height: 1.6; font-size: 16px;">
+        NEIGE is a meditation on light and purity. A radiant burst of bright neroli and orange blossom softly fades into an ethereal, comforting base of white musk and clean linen. It is an uplifting, serene fragrance that feels like warm sunlight on a crisp white shirt.
+      </p>
+    </div>
+
+    <h2 style="font-size: 24px; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 30px;">From the Manufacturer</h2>
+    
+    <div style="display: flex; gap: 40px; margin-bottom: 50px;">
+      <div style="flex: 1;">
+        <img src="images/mood_petale.png" style="width: 100%; object-fit: cover; aspect-ratio: 16/9; margin-bottom: 20px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">The Olfactory Journey</h3>
+        <p style="color: #555; line-height: 1.6;">Experience the depth and complexity of our finest formulations. A masterclass in modern perfumery, blending rare botanicals with contemporary synthetics for unmatched sillage and longevity.</p>
+      </div>
+      <div style="flex: 1;">
+        <img src="images/macro_rose.png" style="width: 100%; object-fit: cover; aspect-ratio: 16/9; margin-bottom: 20px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px;">Scent Profile</h3>
+        <ul style="color: #555; line-height: 1.8; list-style-type: square; margin-left: 20px;">
+          <li><strong>Top Notes:</strong> Bergamot, Cardamom, Pink Pepper</li>
+          <li><strong>Heart Notes:</strong> Iris, Saffron, Rose Absolute</li>
+          <li><strong>Base Notes:</strong> Amber, Sandalwood, Oud, Vanilla</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="font-size: 24px; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 30px;">Customer Reviews</h2>
+    
+    <div style="display: flex; gap: 40px;">
+      <!-- Ratings Sidebar -->
+      <div style="width: 300px;">
+        <div style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">4.8 <span style="font-size: 20px; font-weight: normal;">out of 5</span></div>
+        <div style="color: #000; margin-bottom: 20px; letter-spacing: 2px;">★★★★☆</div>
+        <p style="color: #555; margin-bottom: 20px;">4,120 global ratings</p>
+        
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="color: #555; width: 40px;">5 star</span>
+          <div style="flex: 1; height: 20px; background: #eee; border-radius: 2px; overflow: hidden;">
+            <div style="width: 85%; height: 100%; background: #000;"></div>
+          </div>
+          <span style="color: #555; width: 40px; text-align: right;">85%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="color: #555; width: 40px;">4 star</span>
+          <div style="flex: 1; height: 20px; background: #eee; border-radius: 2px; overflow: hidden;">
+            <div style="width: 10%; height: 100%; background: #000;"></div>
+          </div>
+          <span style="color: #555; width: 40px; text-align: right;">10%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="color: #555; width: 40px;">3 star</span>
+          <div style="flex: 1; height: 20px; background: #eee; border-radius: 2px; overflow: hidden;">
+            <div style="width: 3%; height: 100%; background: #000;"></div>
+          </div>
+          <span style="color: #555; width: 40px; text-align: right;">3%</span>
+        </div>
+      </div>
+      
+      <!-- Written Reviews with Photos -->
+      <div style="flex: 1;">
+        <h3 style="font-size: 18px; margin-bottom: 20px;">Reviews with images</h3>
+        <div style="display: flex; gap: 10px; margin-bottom: 40px; overflow-x: auto;">
+          <img src="images/fragrance_one.png" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+          <img src="images/macro_rose.png" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+          <img src="images/editorial_mood.png" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+          <img src="images/hero_lifestyle.png" style="width: 120px; height: 120px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+        </div>
+
+        <h3 style="font-size: 18px; margin-bottom: 20px;">Top reviews</h3>
+        
+        <div style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 30px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 35px; height: 35px; background: #ccc; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">E</div>
+            <span style="font-weight: bold;">Eleanor V.</span>
+          </div>
+          <div style="color: #000; letter-spacing: 2px; margin-bottom: 10px;">★★★★★ <span style="font-weight: bold; letter-spacing: normal;">A masterpiece of longevity.</span></div>
+          <p style="color: #555; font-size: 13px; margin-bottom: 10px;">Reviewed in the United States on June 12, 2026</p>
+          <p style="color: #333; line-height: 1.6;">I have been collecting niche fragrances for over a decade, and this completely blew me away. The opening is bright, but it dries down into the most intoxicating amber I've ever experienced. One spray lasted me through an entire evening gala and I could still smell it on my coat three days later. Worth every penny.</p>
+        </div>
+        
+        <div style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 30px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <div style="width: 35px; height: 35px; background: #999; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;">M</div>
+            <span style="font-weight: bold;">Marcus T.</span>
+          </div>
+          <div style="color: #000; letter-spacing: 2px; margin-bottom: 10px;">★★★★★ <span style="font-weight: bold; letter-spacing: normal;">Perfect presentation and scent.</span></div>
+          <p style="color: #555; font-size: 13px; margin-bottom: 10px;">Reviewed in the United Kingdom on May 28, 2026</p>
+          <p style="color: #333; line-height: 1.6;">The heavy glass bottle feels incredibly luxurious. The magnetic cap is a great touch. As for the juice inside—it's phenomenal. Highly recommend the Discovery Set if you aren't sure which one to commit to, but you really can't go wrong.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

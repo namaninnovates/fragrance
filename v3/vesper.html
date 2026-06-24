@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE - ETOILE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="arc-header">
+    <div class="arc-nav">
+      <a href="index.html">← INDEX</a>
+    </div>
+    <a href="index.html" class="arc-logo">AURA (ARCHIVES)</a>
+    <div class="arc-nav">
+      <a href="#">Account</a>
+      <a href="#">Cart [<span id="arcCartCount">0</span>]</a>
+    </div>
+  </header>
+
+  <main class="arc-pdp">
+    
+    <div class="arc-pdp__left">
+      <img src="images/fragrance_one.png" alt="ETOILE" class="arc-pdp__main-img">
+    </div>
+
+    <div class="arc-pdp__right">
+      <h1 class="arc-pdp__title">ETOILE</h1>
+      <div class="arc-pdp__ref">REF: VSP-100-CT // RATING: 5.0/5.0</div>
+      
+      <p class="arc-pdp__desc">
+        A sharp, synthetic abstraction of citrus. Bergamot stripped of warmth, rendered metallic and hyper-clean. Anchored by industrial vetiver.
+      </p>
+
+      <div class="arc-tech-block">
+        <div><strong>Olfactory Architecture v.1.18</strong></div>
+        <div style="margin-top: 10px;">Extraction: Cold-pressed centrifugal separation at 4°C.</div>
+        <div>Yield: 0.12% fractionated isolate.</div>
+        <div>Batch N°: VSP-044-Y</div>
+        <div>Filtration: Ceramic micro-mesh.</div>
+      </div>
+
+      <div class="arc-accordion">
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Profile & Specs</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Citrus / Green <br>
+              100ML // 3.4 FL OZ <br>
+              8+ Hours Longevity <br>
+              Grasse, France
+            </div>
+          </div>
+        </div>
+        <div class="arc-accordion__item">
+          <div class="arc-accordion__header">
+            <span>Ingredients Matrix</span>
+            <span class="arc-accordion__indicator">[ + ]</span>
+          </div>
+          <div class="arc-accordion__content">
+            <div class="arc-accordion__inner">
+              Alcohol Denat., Parfum (Fragrance), Aqua (Water), Limonene, Linalool, Citral, Geraniol. <br><br>
+              Contains Calabrian Bergamot Isolate (2.1%), Haitian Vetiver (0.8%).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arc-buy">
+        <div class="arc-buy__price">
+          <span style="text-decoration: line-through; opacity: 0.5; margin-right: 8px; font-size: 0.8em;">Rs 30,000</span>
+          <span class="arc-sale-text">Rs 15,000</span>
+          <span style="background: #fff; color: #000; padding: 2px 6px; font-size: 0.7rem; margin-left: 8px; text-transform: uppercase; font-weight: bold;">50% OFF</span>
+        </div>
+        <div class="arc-buy__grid">
+          <select class="arc-buy__qty">
+            <option>QTY: 01</option>
+            <option>QTY: 02</option>
+            <option>QTY: 03</option>
+          </select>
+          <button class="arc-buy__btn" onclick="addToArcCart('vesper', 15000)">ADD TO CART</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <section class="arc-associated">
+    <div class="arc-associated__title">Associated Archives</div>
+    <div class="arc-associated__grid">
+      <div class="arc-associated__item">
+        <img src="images/macro_bergamot.png" alt="Bergamot">
+        <div class="arc-associated__item-title">Case 04: Calabrian Bergamot</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/macro_iris.png" alt="Iris">
+        <div class="arc-associated__item-title">Case 05: Orris Root Isolate</div>
+      </div>
+      <div class="arc-associated__item">
+        <img src="images/editorial_mood_1781982227981.png" alt="Mood">
+        <div class="arc-associated__item-title">Reference: ETOILE Concept</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

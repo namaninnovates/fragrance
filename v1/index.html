@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA - High-End E-Commerce</title>
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body data-theme="dark">
+
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="#">Menu</a>
+      </div>
+      <a href="index.html" class="nav__logo">AURA</a>
+      <div class="nav__right">
+        <button id="bagToggle">Bag (<span id="bagCount">0</span>)</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody">
+      <div id="cartEmpty" style="color: var(--text-muted); text-align: center; padding-top: 2rem;">Your bag is empty.</div>
+    </div>
+    <div class="cart-drawer__foot" id="cartFoot" style="display:none;">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="cart-drawer__checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <main class="hub">
+    <!-- Hero (Dark) -->
+    <section class="hub__hero">
+      <div class="grain-overlay"></div>
+      <img src="images/hero_bottle.png" alt="Atelier Lux" class="hub__hero-img">
+      
+      <div class="hub__hero-content reveal">
+        <h1 class="hub__hero-title">Atelier Lux</h1>
+        <div class="hub__hero-subtitle">"A triumph of modern perfumery."</div>
+      </div>
+
+      <div class="scroll-indicator reveal">
+        <span class="material-symbols-outlined">south</span>
+      </div>
+    </section>
+
+    <!-- Products Hub -->
+    <section class="hub__grid" id="collection">
+      <!-- 1: ONIRIQUE -->
+      <article class="hub-item">
+        <div class="hub-item__image">
+          <img src="images/fragrance_two.png" alt="ONIRIQUE">
+        </div>
+        <div class="hub-item__content reveal">
+          <h2 class="hub-item__name">ONIRIQUE</h2>
+          
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Top</span>
+            <span>Saffron</span>
+          </div>
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Heart</span>
+            <span>Oud</span>
+          </div>
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Base</span>
+            <span>Amber, Sandalwood</span>
+          </div>
+          
+          <a href="l-ambre-noir.html" class="hub-item__btn">Explore</a>
+        </div>
+      </article>
+
+      <!-- 2: ETOILE -->
+      <article class="hub-item hub-item--horizontal">
+        <div class="hub-item__image">
+          <img src="images/editorial_mood.png" alt="ETOILE Editorial">
+        </div>
+        <div class="hub-item__content reveal">
+          <h2 class="hub-item__name">ETOILE</h2>
+          <p style="font-size: 1.2rem; margin-bottom: 2rem; letter-spacing: 2px; color: #fff;">BERGAMOT / OAKMOSS / VETIVER</p>
+          <a href="vesper.html" class="hub-item__btn">Explore</a>
+        </div>
+      </article>
+
+      <!-- 3: NEIGE -->
+      <article class="hub-item">
+        <div class="hub-item__image">
+          <img src="images/fragrance_three.png" alt="NEIGE">
+        </div>
+        <div class="hub-item__content reveal">
+          <h2 class="hub-item__name">NEIGE</h2>
+          
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Top</span>
+            <span>Neroli, Orange Blossom</span>
+          </div>
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Heart</span>
+            <span>White Musk, Jasmine</span>
+          </div>
+          <div class="hub-item__meta">
+            <span class="hub-item__meta-label">Base</span>
+            <span>Linen, Cashmere</span>
+          </div>
+          
+          <a href="solstice.html" class="hub-item__btn">Explore</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__logo">AURA</h3>
+        <p>&copy; 2026 AURA Parfums.<br>All rights reserved.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Client Care</h4>
+        <a href="#">Shipping & Returns</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Atelier</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Boutiques</a>
+        <a href="#">Ingredients</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Newsletter</h4>
+        <p>Subscribe to receive updates on new releases and private collections.</p>
+        <div class="footer__input-group">
+          <input type="email" placeholder="Email Address">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
